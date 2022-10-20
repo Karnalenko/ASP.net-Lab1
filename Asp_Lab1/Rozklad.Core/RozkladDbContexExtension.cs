@@ -73,6 +73,47 @@ namespace Rozklad.Core
                          RoleId = USER_ROLE_ID,
                          UserId = USER_ID
                      });
+
+            
+            builder.Entity<BusRoute>().HasData(
+             new BusRoute
+             {
+                 BusrouteId = 1,
+                 PlaceOfDeparture = "Острог",
+                 IntermediateStops = "gremzc",
+                 PlaceOfArrival = "Рівне"
+             });
+          
+
+builder.Entity<BusShedule>().HasData(
+new BusShedule
+{
+Id = 1,
+     //DepartureTime = 00.00.2022, 
+  BusrouteId = 1,
+Seats = 30,
+    carrierId =1, 
+    statusId = 1, 
+    //ArrivalTime 
+Cost = 75
+
+});
+
+             builder.Entity<Carrier>().HasData(
+   new Carrier
+   {
+       carrierId = 1,
+       Name="Ilias",
+       Transport = "autobus"
+
+   });
+             builder.Entity<Status>().HasData(
+   new Status
+   {
+       statusId = 1,
+       StatusValue = "В дорозі"
+   });
+
         }
     }
 }
