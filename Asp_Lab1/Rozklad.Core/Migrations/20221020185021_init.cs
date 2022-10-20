@@ -240,8 +240,8 @@ namespace Rozklad.Core.Migrations
                 columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
                 values: new object[,]
                 {
-                    { "7c5f4b3b-8c0c-44c7-a0df-2b011040a7c4", "c27180cb-7258-4885-a02a-8607a6a032b1", "User", "USER" },
-                    { "b5d44de4-1b7e-4729-a591-b795aacfd6d5", "ea0654fd-2941-4dc5-8514-d3cf49631c59", "Admin", "ADMIN" }
+                    { "1a60b1a8-9fce-4c02-be19-b4b44ab3d4fa", "9f045c7c-9a89-423d-9257-950b1662219f", "Admin", "ADMIN" },
+                    { "aca824a2-570c-476d-ae80-8f2b9518b6c7", "93be245b-aae2-40cc-a0ba-a2125f7a1b36", "User", "USER" }
                 });
 
             migrationBuilder.InsertData(
@@ -249,8 +249,8 @@ namespace Rozklad.Core.Migrations
                 columns: new[] { "Id", "AccessFailedCount", "ConcurrencyStamp", "Email", "EmailConfirmed", "FirstName", "LastName", "LockoutEnabled", "LockoutEnd", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "SecurityStamp", "TwoFactorEnabled", "UserName" },
                 values: new object[,]
                 {
-                    { "de5f57ee-af93-412b-9ae8-4348ee409fbc", 0, "e6aedb14-daa6-4549-aab2-87f4be4015fc", "user@rozklad.com", true, null, null, false, null, "USER@ROZKLAD.COM", "USER@ROZKLAD.COM", "AQAAAAEAACcQAAAAEOmXqblUodZ8F+I8eCrI7JMQVBIUZRhrK0FMn5TRiI1gPKgYvJWxw72qoYBxzfKPYg==", null, false, "dd759206-d259-4aca-a257-ec6770f17e3d", false, "user@rozklad.com" },
-                    { "e1bf6239-e4d7-495a-822b-a256967c8fdd", 0, "62fe0b6d-bf8e-4512-9611-a8e51db18e23", "admin@rozklad.com", true, null, null, false, null, "ADMIN@ROZKLAD.COM", "ADMIN@ROZKLAD.COM", "AQAAAAEAACcQAAAAEPbEggG/Ga0HJwGc+kNaYctxuSmMPb3nmYQjB1+ewZACbSUJaTVcOk36Mdg0rmULFA==", null, false, "49c11baf-d7f1-4a9c-b180-c0eae816d157", false, "admin@rozklad.com" }
+                    { "098c2bdf-539b-43ca-9628-eb19598081ab", 0, "b2e27d80-4f07-4a29-8482-bc9f3534beb8", "user@rozklad.com", true, null, null, false, null, "USER@ROZKLAD.COM", "USER@ROZKLAD.COM", "AQAAAAEAACcQAAAAEJr/X7utT5zIwvi6FwpmBGf/WJrWwZRMjcUBKA1hQHjpv83p+fQGJhjWPPgTDGxS6A==", null, false, "d2a47619-475c-44a4-806e-895b79bb3a45", false, "user@rozklad.com" },
+                    { "c7397cf2-89ad-495a-987b-936dae5f09c5", 0, "cf775e95-1563-4fc5-b8f7-47737e2c85b3", "admin@rozklad.com", true, null, null, false, null, "ADMIN@ROZKLAD.COM", "ADMIN@ROZKLAD.COM", "AQAAAAEAACcQAAAAEBVdpsHySrOIogTUyU0G8JdJEQs/xItgvB1KcU8+/Ix6/02Kvn6p4flS2c1LwU1mLA==", null, false, "4a908261-0160-47cd-96d4-706ab36d3826", false, "admin@rozklad.com" }
                 });
 
             migrationBuilder.InsertData(
@@ -273,15 +273,15 @@ namespace Rozklad.Core.Migrations
                 columns: new[] { "RoleId", "UserId" },
                 values: new object[,]
                 {
-                    { "7c5f4b3b-8c0c-44c7-a0df-2b011040a7c4", "de5f57ee-af93-412b-9ae8-4348ee409fbc" },
-                    { "7c5f4b3b-8c0c-44c7-a0df-2b011040a7c4", "e1bf6239-e4d7-495a-822b-a256967c8fdd" },
-                    { "b5d44de4-1b7e-4729-a591-b795aacfd6d5", "e1bf6239-e4d7-495a-822b-a256967c8fdd" }
+                    { "aca824a2-570c-476d-ae80-8f2b9518b6c7", "098c2bdf-539b-43ca-9628-eb19598081ab" },
+                    { "1a60b1a8-9fce-4c02-be19-b4b44ab3d4fa", "c7397cf2-89ad-495a-987b-936dae5f09c5" },
+                    { "aca824a2-570c-476d-ae80-8f2b9518b6c7", "c7397cf2-89ad-495a-987b-936dae5f09c5" }
                 });
 
             migrationBuilder.InsertData(
                 table: "BusShedules",
                 columns: new[] { "Id", "ArrivalTime", "BusrouteId", "Cost", "DepartureTime", "Seats", "carrierId", "statusId" },
-                values: new object[] { 1, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), 1, 75f, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), 30, 1, 1 });
+                values: new object[] { 1, new DateTime(2022, 7, 20, 20, 30, 25, 0, DateTimeKind.Unspecified), 1, 75f, new DateTime(2022, 7, 20, 18, 30, 25, 0, DateTimeKind.Unspecified), 30, 1, 1 });
 
             migrationBuilder.CreateIndex(
                 name: "IX_AspNetRoleClaims_RoleId",

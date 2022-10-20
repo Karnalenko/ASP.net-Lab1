@@ -12,7 +12,7 @@ using Rozklad.Core;
 namespace Rozklad.Core.Migrations
 {
     [DbContext(typeof(RozkladContext))]
-    [Migration("20221020164608_init")]
+    [Migration("20221020185021_init")]
     partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -53,15 +53,15 @@ namespace Rozklad.Core.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "b5d44de4-1b7e-4729-a591-b795aacfd6d5",
-                            ConcurrencyStamp = "ea0654fd-2941-4dc5-8514-d3cf49631c59",
+                            Id = "1a60b1a8-9fce-4c02-be19-b4b44ab3d4fa",
+                            ConcurrencyStamp = "9f045c7c-9a89-423d-9257-950b1662219f",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         },
                         new
                         {
-                            Id = "7c5f4b3b-8c0c-44c7-a0df-2b011040a7c4",
-                            ConcurrencyStamp = "c27180cb-7258-4885-a02a-8607a6a032b1",
+                            Id = "aca824a2-570c-476d-ae80-8f2b9518b6c7",
+                            ConcurrencyStamp = "93be245b-aae2-40cc-a0ba-a2125f7a1b36",
                             Name = "User",
                             NormalizedName = "USER"
                         });
@@ -158,18 +158,18 @@ namespace Rozklad.Core.Migrations
                     b.HasData(
                         new
                         {
-                            UserId = "e1bf6239-e4d7-495a-822b-a256967c8fdd",
-                            RoleId = "b5d44de4-1b7e-4729-a591-b795aacfd6d5"
+                            UserId = "c7397cf2-89ad-495a-987b-936dae5f09c5",
+                            RoleId = "1a60b1a8-9fce-4c02-be19-b4b44ab3d4fa"
                         },
                         new
                         {
-                            UserId = "e1bf6239-e4d7-495a-822b-a256967c8fdd",
-                            RoleId = "7c5f4b3b-8c0c-44c7-a0df-2b011040a7c4"
+                            UserId = "c7397cf2-89ad-495a-987b-936dae5f09c5",
+                            RoleId = "aca824a2-570c-476d-ae80-8f2b9518b6c7"
                         },
                         new
                         {
-                            UserId = "de5f57ee-af93-412b-9ae8-4348ee409fbc",
-                            RoleId = "7c5f4b3b-8c0c-44c7-a0df-2b011040a7c4"
+                            UserId = "098c2bdf-539b-43ca-9628-eb19598081ab",
+                            RoleId = "aca824a2-570c-476d-ae80-8f2b9518b6c7"
                         });
                 });
 
@@ -271,10 +271,10 @@ namespace Rozklad.Core.Migrations
                         new
                         {
                             Id = 1,
-                            ArrivalTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ArrivalTime = new DateTime(2022, 7, 20, 20, 30, 25, 0, DateTimeKind.Unspecified),
                             BusrouteId = 1,
                             Cost = 75f,
-                            DepartureTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DepartureTime = new DateTime(2022, 7, 20, 18, 30, 25, 0, DateTimeKind.Unspecified),
                             Seats = 30,
                             carrierId = 1,
                             statusId = 1
@@ -407,33 +407,33 @@ namespace Rozklad.Core.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "e1bf6239-e4d7-495a-822b-a256967c8fdd",
+                            Id = "c7397cf2-89ad-495a-987b-936dae5f09c5",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "62fe0b6d-bf8e-4512-9611-a8e51db18e23",
+                            ConcurrencyStamp = "cf775e95-1563-4fc5-b8f7-47737e2c85b3",
                             Email = "admin@rozklad.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NormalizedEmail = "ADMIN@ROZKLAD.COM",
                             NormalizedUserName = "ADMIN@ROZKLAD.COM",
-                            PasswordHash = "AQAAAAEAACcQAAAAEPbEggG/Ga0HJwGc+kNaYctxuSmMPb3nmYQjB1+ewZACbSUJaTVcOk36Mdg0rmULFA==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEBVdpsHySrOIogTUyU0G8JdJEQs/xItgvB1KcU8+/Ix6/02Kvn6p4flS2c1LwU1mLA==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "49c11baf-d7f1-4a9c-b180-c0eae816d157",
+                            SecurityStamp = "4a908261-0160-47cd-96d4-706ab36d3826",
                             TwoFactorEnabled = false,
                             UserName = "admin@rozklad.com"
                         },
                         new
                         {
-                            Id = "de5f57ee-af93-412b-9ae8-4348ee409fbc",
+                            Id = "098c2bdf-539b-43ca-9628-eb19598081ab",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "e6aedb14-daa6-4549-aab2-87f4be4015fc",
+                            ConcurrencyStamp = "b2e27d80-4f07-4a29-8482-bc9f3534beb8",
                             Email = "user@rozklad.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NormalizedEmail = "USER@ROZKLAD.COM",
                             NormalizedUserName = "USER@ROZKLAD.COM",
-                            PasswordHash = "AQAAAAEAACcQAAAAEOmXqblUodZ8F+I8eCrI7JMQVBIUZRhrK0FMn5TRiI1gPKgYvJWxw72qoYBxzfKPYg==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEJr/X7utT5zIwvi6FwpmBGf/WJrWwZRMjcUBKA1hQHjpv83p+fQGJhjWPPgTDGxS6A==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "dd759206-d259-4aca-a257-ec6770f17e3d",
+                            SecurityStamp = "d2a47619-475c-44a4-806e-895b79bb3a45",
                             TwoFactorEnabled = false,
                             UserName = "user@rozklad.com"
                         });

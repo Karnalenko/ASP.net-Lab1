@@ -1,8 +1,6 @@
 ﻿@using Rozklad.Repos.Dto
 @model IEnumerable<BusSheduleReadDto>
 
-
-
 <div class="float-end">
     <a href="/home/create" class="btn btn-outline-primary">Додати інформацію</a>
 </div>
@@ -27,13 +25,13 @@
         @foreach (var u in Model)
         {
             <tr>
-                <td></td>
+                <td>@u.DepartureTime</td>
                 <td></td>
                 <td>@u.Seats</td>
+                <td></td>
+                <td></td>
+                <td>@u.ArrivalTime</td>
                 <td>@u.Cost</td>
-                <td></td>
-                <td></td>
-                <td></td>
                 <td>
                     <a href="/home/edit/@u.Id" class=" btn btn-warning">Редагувати</a>
                     <a href="/home/delete/@u.Id" class=" btn btn-danger">Видалити</a>

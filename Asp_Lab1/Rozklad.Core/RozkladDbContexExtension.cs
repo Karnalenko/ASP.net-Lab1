@@ -83,18 +83,20 @@ namespace Rozklad.Core
                  IntermediateStops = "gremzc",
                  PlaceOfArrival = "Рівне"
              });
-          
 
-builder.Entity<BusShedule>().HasData(
+            DateTime date1 = new DateTime(2022, 7, 20, 18, 30, 25);
+            DateTime date2 = new DateTime(2022, 7, 20, 20, 30, 25);
+
+            builder.Entity<BusShedule>().HasData(
 new BusShedule
 {
 Id = 1,
-     //DepartureTime = 00.00.2022, 
+     DepartureTime = date1, 
   BusrouteId = 1,
 Seats = 30,
     carrierId =1, 
     statusId = 1, 
-    //ArrivalTime 
+   ArrivalTime = date2,
 Cost = 75
 
 });

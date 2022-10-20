@@ -23,48 +23,31 @@ namespace Rozklad.Repos
 
          public async Task<IEnumerable<BusSheduleReadDto>> GetBusSheduleAsync()
          {
-            int id =1;
-            var n = await _ctx.BusShedules.FirstAsync(x => x.Id == id);
+         
 
             var shedules = new List<BusSheduleReadDto>();
 
              foreach (var u in  _ctx.BusShedules.ToList())
              {
-                 var busDto = new BusSheduleReadDto
-                 {
-                    
+               
+
+                var busDto = new BusSheduleReadDto
+                {
+                    DepartureTime = u.DepartureTime,
+                   
                      Seats = u.Seats,
                      Cost = u.Cost,
-                     //LastName = u.LastName,
-                     //IsConfirmed = u.EmailConfirmed,
-                   
-                 };                 
-                 shedules.Add(busDto);
+                     ArrivalTime = u.ArrivalTime,
+            };
+
+            
+                    shedules.Add(busDto);
              }
-             return  shedules;
+
+           
+
+            return  shedules;
          }
-
-        /* public async Task<BusSheduleReadDto> GetBusSheduleAsync(int id)
-          {
-              var u = await _ctx.BusShedules.FirstAsync(x => x.Id == id);
-
-
-                  var busDto = new BusSheduleReadDto
-                  {
-                      Id = u.Id,
-                      Seats = u.Seats,
-                      Cost = u.Cost,
-                      //LastName = u.LastName,
-                     // IsConfirmed = u.EmailConfirmed,
-                  };
-
-                  /*foreach (var role in await userManager.GetRolesAsync(u))
-                  {
-                      userDto.Roles.Add(await _ctx.Roles.FirstAsync(x => x.Name.ToLower() == role.ToLower()));
-
-                  }
-              return busDto;
-              }*/
 
 
     }
